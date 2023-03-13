@@ -4,6 +4,7 @@ const http = require('http');
 const calculator = require('./calculator');
 
 const server = http.createServer((req, res) => {
+  // được sử dụng để lấy các tham số được truyền từ form HTML khi người dùng submit form.
   const { query } = require('url').parse(req.url, true);
 
   const { num1, num2, op } = query;
